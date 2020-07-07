@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+	<!-- SECTION-NAV -->
+	<div id="section-nav-wrap">
+		<section id="section-nav">
+			<p>Home / <a href="contact.html">Contact</a></p>
+		</section>
+	</div>
+	<!-- /SECTION-NAV -->
+
+	<!-- CONTACT -->
+	<div id="contact-wrap">
+		<section id="contact">
+			<!-- CONTACT FORM -->
+			<div class="contact-form">
+				<h3 class="title">Contact</h3>
+				<!-- CONTACT DETAILS -->
+				<div class="contact-details">
+					<p>Lorem ipsum dolor sit amet, consectetur er adipisicing elit, sed do eiusmod eru. Lorem ipsum dolor sit amet, consectetur.</p>
+					<!-- CONTACT INFO -->
+					<ul class="contact-info">
+						<li class="address">
+							<!-- SVG PIN -->
+							<svg class="svg-pin">
+								<use xlink:href="#svg-pin"></use>	
+							</svg>
+							<!-- /SVG PIN -->
+							<p>34th Street 1235, New York, NY</p>
+						</li>
+						<li class="phone">
+							<!-- SVG PHONE -->
+							<svg class="svg-phone">
+								<use xlink:href="#svg-phone"></use>	
+							</svg>
+							<!-- /SVG PHONE -->
+							<p>(044) 555 123 1234/35</p>
+						</li>
+						<li class="email">
+							<!-- SVG ENVELOPE -->
+							<svg class="svg-envelope">
+								<use xlink:href="#svg-envelope"></use>	
+							</svg>
+							<!-- /SVG ENVELOPE -->
+							<p><a href="mailto:questions@westeroscc.com">questions@westeroscc.com</a></p>
+						</li>
+					</ul>
+					<!-- /CONTACT INFO -->
+					<h5>Connect with us!</h5>
+					<!-- SOCIAL LINKS -->
+					<ul class="social-links">
+						<li class="fb"><a href="#"></a></li>
+						<li class="twt"><a href="#"></a></li>
+						<li class="gplus"><a href="#"></a></li>
+						<li class="vm"><a href="#"></a></li>
+					</ul>
+					<!-- /SOCIAL LINKS -->
+				</div>
+				<!-- /CONTACT DETAILS -->
+				<div class="featured-form">
+					<form class="westeros-form">
+						<label class="rl-label required">Your Name</label>
+						<input type="text" placeholder="Enter your full name here...">
+						<label class="rl-label required">Your Email</label>
+						<input type="text" placeholder="Enter your email address here...">
+						<label class="rl-label required">Your Message</label>
+						<textarea placeholder="Write your message here..."></textarea>
+						<button class="button">Send Your Message</button>
+					</form>
+				</div>
+			</div>
+			<!-- /CONTACT FORM -->
+		</section>
+	</div>
+	<!-- /CONTACT -->
+
+{% endblock %}

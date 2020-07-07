@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Login and Register{% endblock %}
+
+{% block scripts %}
+	<!-- Register-Login -->
+	<script src="{% static 'westeros/js/register-login.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+	<!-- SECTION-NAV -->
+	<div id="section-nav-wrap">
+		<section id="section-nav">
+			<p><a href="{% url 'home' %}">Home</a> / <span>Login and Register</span></p>
+		</section>
+	</div>
+	<!-- /SECTION-NAV -->
+
+	<!-- REGISTER-LOGIN -->
+	<div id="register-login-wrap">
+		<section id="register-login">
+			<div class="featured-form">
+				<h3>New? Register Now!</h3>
+				<form class="westeros-form">
+					<label class="rl-label">Your Name</label>
+					<input type="text" placeholder="Enter your full name here...">
+					<label class="rl-label required">Your Email Address</label>
+					<input type="text" placeholder="Enter your email address here...">
+					<label class="rl-label required">Password</label>
+					<input type="text" placeholder="Enter your password here...">
+					<button class="button register">Create your account</button>
+				</form>
+			</div>
+
+			<div class="featured-form">
+				<h3>Login To Your Account</h3>
+				<form class="westeros-form">
+					<label class="rl-label">Your Email Address</label>
+					<input type="text" placeholder="Enter your email address here...">
+					<label class="rl-label">Your Password</label>
+					<input type="text" placeholder="Enter your password here...">
+					<input type="checkbox" id="remember" name="remember">
+					<label for="remember"><span class="checkbox"><span></span></span>Remember my email and password</label>
+					<a href="#" class="fp-msg">Forgot your password? Click here!</a>
+					<button class="button login">Sign in Now!</button>
+				</form>
+			</div>
+		</section>
+	</div>
+	<!-- /REGISTER-LOGIN -->
+
+	<!-- ADVERTISING -->
+	<div id="advertising-wrap">
+		<section id="advertising" class="short">
+			<div class="ad-box clearfix">
+				<a href="#">
+					<img src="{% static 'westeros/images/banner1.png' %}" alt="banner1">
+				</a>
+				<a href="#">
+					<img src="{% static 'westeros/images/banner2.png' %}" alt="banner2">
+				</a>
+			</div>
+		</section>
+	</div>
+	<!-- /ADVERTISING -->
+
+	<!-- BRANDS -->
+	<div id="brands-wrap">
+		<section id="brands">
+			<h3 class="title">Our Brands</h3>
+			<div class="slidable">
+				<!-- SLIDE CONTROLS -->
+				<ul class="slide-controls">
+					<!-- LEFT CONTROL -->
+					<li>
+						<a href="#" class="button prev">
+							<!-- SVG ARROW -->
+							<svg class="svg-arrow">
+								<use xlink:href="#svg-arrow"></use>
+							</svg>
+							<!-- /SVG ARROW -->
+						</a>
+					</li>
+					<!-- /LEFT CONTROL -->
+
+					<!-- RIGHT CONTROL -->
+					<li>
+						<a href="#" class="button next">
+							<!-- SVG ARROW -->
+							<svg class="svg-arrow">
+								<use xlink:href="#svg-arrow"></use>
+							</svg>
+							<!-- /SVG ARROW -->
+						</a>
+					</li>
+					<!-- /RIGHT CONTROL -->
+				</ul>
+				<!-- /SLIDE CONTROLS -->
+
+				<!-- BRANDS LIST -->
+				<ul id="owl-brands" class="brands-list owl-carousel">
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/gr.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/gr-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/tf.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/tf-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/aj.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/aj-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/vh.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/vh-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/pd.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/pd-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/gr.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/gr-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+
+					<!-- BRAND -->
+					<li>
+						<a href="#">
+							<img src="{% static 'westeros/images/tf.png' %}" alt="brand-normal">
+							<img src="{% static 'westeros/images/tf-over.png' %}" alt="brand-over">
+						</a>
+					</li>
+					<!-- /BRAND -->
+				</ul>
+				<!-- /BRANDS LIST -->
+			</div>
+		</section>
+	</div>
+	<!-- /BRANDS -->
+
+{% endblock %}

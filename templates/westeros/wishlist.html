@@ -1,0 +1,501 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Your Wishlist{% endblock %}
+
+{% block scripts %}
+	<!-- XM Tab -->
+	<script src="{% static 'westeros/js/jquery.xmtab.min.js' %}"></script>
+    <!-- Shop -->
+    <script src="{% static 'westeros/js/shop.js' %}"></script>
+    <!-- Full View -->
+	<script src="{% static 'westeros/js/full-view.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+	<!-- SECTION-NAV -->
+	<div id="section-nav-wrap">
+		<section id="section-nav">
+			<p>Home / <a href="#">Your Wishlist</a></p>
+		</section>
+	</div>
+	<!-- /SECTION-NAV -->
+
+	<!-- SHOP -->
+	<div id="shop-wrap">
+		<section id="shop" class="right expandible-sidebar">
+			{% include 'westeros/sidebar.html' %}
+
+			<!-- SHOP PRODUCTS -->
+			<div class="shop-products">
+				<h3 class="title">Your Wishlist</h3>
+
+				<!-- COMPARE MODAL -->
+				<div id="compare-modal" class="compare-modal mfp-with-anim mfp-hide">
+					<img src="{% static 'westeros/images/compare-modal-logo.png' %}" alt="logo">
+					<h5>The item <span>product name</span></h5>
+					<h6>Has been sucessfully added to compare</h6>
+					<div class="options">
+						<a class="button medium mfp-close">Return to store</a>
+						<a href="{% url 'compare' %}" class="button medium compare">Go to compare</a>
+					</div>
+				</div>
+				<!-- /COMPARE MODAL -->
+
+				<figure class="section-banner">
+					<img src="{% static 'westeros/images/wishlist-banner.png' %}" alt="men-banner">
+				</figure>
+				<!-- FILTERS -->
+				<div class="filters single">
+					<h3 class="subtitle">Items 1 to 5 out of 32 total</h3>
+					<div class="options">
+						<form class="westeros-form">
+							<label class="select-block" for="show">Show:
+								<select name="show" id="show">
+									<option value="1">5 Per Page</option>
+									<option value="2">10 Per Page</option>
+								</select>
+								<!-- SVG ARROW -->
+								<svg class="svg-arrow select-arrow">
+									<use xlink:href="#svg-arrow"></use>
+								</svg>
+								<!-- /SVG ARROW -->
+							</label>
+						</form>
+					</div>
+				</div>
+				<!-- /FILTERS -->
+
+				<!-- SHOPPING CART -->
+				<div class="shopping-cart wishlist-cart">
+					<!-- ROW -->
+					<div class="row header">
+						<!-- CELL -->
+						<div class="cell">
+							<h5>Product Details</h5>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<h5>Unit Price</h5>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<h5>Quantity</h5>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">				
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+
+					<!-- ROW -->
+					<div class="row">
+						<!-- CELL -->
+						<div class="cell cart-item">
+							<div class="product-picture">
+								<figure class="liquid">
+									<img src="{% static 'westeros/images/15.png' %}" alt="product-picture">
+								</figure>
+							</div>
+							<p class="highlighted">T-Shirts</p>
+							<h3>The Devil Pin</h3>
+							<p>Lorem ipsum dolor</p>
+							<h6>Size: <span>Large</span></h6>
+							<!-- COLORPICKER -->
+							<ul class="colorpicker">
+								<li><span data-color="#252525"></span></li>
+							</ul>
+							<!-- /COLORPICKER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<p class="highlighted">$54.00</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<!-- COUNTER -->
+							<div class="counter">
+								<div class="control left"></div>
+								<div class="value">
+									<h5>1</h5>
+								</div>
+								<div class="control right"></div>
+							</div>
+							<!-- /COUNTER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell buttons big">
+							<a href="#" class="button cart-add">
+								<!-- SVG PLUS -->
+								<svg class="svg-plus">
+									<use xlink:href="#svg-plus"></use>
+								</svg>
+								<!-- /SVG PLUS -->
+								Add to Cart
+							</a>
+							
+							<!-- ACTIONS -->
+							<div class="actions">
+								<a href="#compare-modal" class="button medium compare cmp-popup" data-effect="mfp-3d-unfold">
+									<!-- SVG COMPARE -->
+									<svg class="svg-compare">
+										<use xlink:href="#svg-compare"></use>	
+									</svg>
+									<!-- /SVG COMPARE -->
+								</a>
+
+								<a href="#" class="button medium no-stock">
+									<!-- SVG PLUS -->
+									<svg class="svg-plus">
+										<use xlink:href="#svg-plus"></use>
+									</svg>
+									<!-- /SVG PLUS -->
+								</a>
+							</div>
+							<!-- /ACTIONS -->
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+
+					<!-- ROW -->
+					<div class="row">
+						<!-- CELL -->
+						<div class="cell cart-item">
+							<div class="product-picture">
+								<figure class="liquid">
+									<img src="{% static 'westeros/images/34.png' %}" alt="product-picture">
+								</figure>
+							</div>
+							<p class="highlighted">Phone Cases</p>
+							<h3>Dial Z For Zombie</h3>
+							<p>Lorem ipsum dolor</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<p class="highlighted">$26.00</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<!-- COUNTER -->
+							<div class="counter">
+								<div class="control left"></div>
+								<div class="value">
+									<h5>1</h5>
+								</div>
+								<div class="control right"></div>
+							</div>
+							<!-- /COUNTER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell buttons big">
+							<a href="#" class="button cart-add">
+								<!-- SVG PLUS -->
+								<svg class="svg-plus">
+									<use xlink:href="#svg-plus"></use>
+								</svg>
+								<!-- /SVG PLUS -->
+								Add to Cart
+							</a>
+							
+							<!-- ACTIONS -->
+							<div class="actions">
+								<a href="#compare-modal" class="button medium compare cmp-popup" data-effect="mfp-3d-unfold">
+									<!-- SVG COMPARE -->
+									<svg class="svg-compare">
+										<use xlink:href="#svg-compare"></use>	
+									</svg>
+									<!-- /SVG COMPARE -->
+								</a>
+
+								<a href="#" class="button medium no-stock">
+									<!-- SVG PLUS -->
+									<svg class="svg-plus">
+										<use xlink:href="#svg-plus"></use>
+									</svg>
+									<!-- /SVG PLUS -->
+								</a>
+							</div>
+							<!-- /ACTIONS -->
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+
+					<!-- ROW -->
+					<div class="row">
+						<!-- CELL -->
+						<div class="cell cart-item">
+							<div class="product-picture">
+								<figure class="liquid">
+									<img src="{% static 'westeros/images/32.png' %}" alt="product-picture">
+								</figure>
+							</div>
+							<p class="highlighted">Custom Sneakers</p>
+							<h3>The Devil Walks</h3>
+							<p>Lorem ipsum dolor</p>
+							<h6>Size: <span>6</span></h6>
+							<!-- COLORPICKER -->
+							<ul class="colorpicker">
+								<li><span data-color="#d52929"></span></li>
+							</ul>
+							<!-- /COLORPICKER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<p class="highlighted">$43.00</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<!-- COUNTER -->
+							<div class="counter">
+								<div class="control left"></div>
+								<div class="value">
+									<h5>1</h5>
+								</div>
+								<div class="control right"></div>
+							</div>
+							<!-- /COUNTER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell buttons big">
+							<a href="#" class="button cart-add">
+								<!-- SVG PLUS -->
+								<svg class="svg-plus">
+									<use xlink:href="#svg-plus"></use>
+								</svg>
+								<!-- /SVG PLUS -->
+								Add to Cart
+							</a>
+							
+							<!-- ACTIONS -->
+							<div class="actions">
+								<a href="#compare-modal" class="button medium compare cmp-popup" data-effect="mfp-3d-unfold">
+									<!-- SVG COMPARE -->
+									<svg class="svg-compare">
+										<use xlink:href="#svg-compare"></use>	
+									</svg>
+									<!-- /SVG COMPARE -->
+								</a>
+
+								<a href="#" class="button medium no-stock">
+									<!-- SVG PLUS -->
+									<svg class="svg-plus">
+										<use xlink:href="#svg-plus"></use>
+									</svg>
+									<!-- /SVG PLUS -->
+								</a>
+							</div>
+							<!-- /ACTIONS -->
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+
+					<!-- ROW -->
+					<div class="row">
+						<!-- CELL -->
+						<div class="cell cart-item">
+							<div class="product-picture">
+								<figure class="liquid">
+									<img src="{% static 'westeros/images/35.png' %}" alt="product-picture">
+								</figure>
+							</div>
+							<p class="highlighted">Pin Badges</p>
+							<h3>Mo Monster</h3>
+							<p>Lorem ipsum dolor</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<p class="highlighted">$2.00</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<!-- COUNTER -->
+							<div class="counter">
+								<div class="control left"></div>
+								<div class="value">
+									<h5>1</h5>
+								</div>
+								<div class="control right"></div>
+							</div>
+							<!-- /COUNTER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell buttons big">
+							<a href="#" class="button cart-add">
+								<!-- SVG PLUS -->
+								<svg class="svg-plus">
+									<use xlink:href="#svg-plus"></use>
+								</svg>
+								<!-- /SVG PLUS -->
+								Add to Cart
+							</a>
+							
+							<!-- ACTIONS -->
+							<div class="actions">
+								<a href="#compare-modal" class="button medium compare cmp-popup" data-effect="mfp-3d-unfold">
+									<!-- SVG COMPARE -->
+									<svg class="svg-compare">
+										<use xlink:href="#svg-compare"></use>	
+									</svg>
+									<!-- /SVG COMPARE -->
+								</a>
+
+								<a href="#" class="button medium no-stock">
+									<!-- SVG PLUS -->
+									<svg class="svg-plus">
+										<use xlink:href="#svg-plus"></use>
+									</svg>
+									<!-- /SVG PLUS -->
+								</a>
+							</div>
+							<!-- /ACTIONS -->
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+
+					<!-- ROW -->
+					<div class="row">
+						<!-- CELL -->
+						<div class="cell cart-item">
+							<div class="product-picture">
+								<figure class="liquid">
+									<img src="{% static 'westeros/images/26.png' %}" alt="product-picture">
+								</figure>
+							</div>
+							<p class="highlighted">T-Shirts</p>
+							<h3>The Happy Pastry</h3>
+							<p>Lorem ipsum dolor</p>
+							<h6>Size: <span>6</span></h6>
+							<!-- COLORPICKER -->
+							<ul class="colorpicker">
+								<li><span data-color="#d2d2d2"></span></li>
+							</ul>
+							<!-- /COLORPICKER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<p class="highlighted">$63.00</p>
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell">
+							<!-- COUNTER -->
+							<div class="counter">
+								<div class="control left"></div>
+								<div class="value">
+									<h5>1</h5>
+								</div>
+								<div class="control right"></div>
+							</div>
+							<!-- /COUNTER -->
+						</div>
+						<!-- /CELL -->
+
+						<!-- CELL -->
+						<div class="cell buttons big">
+							<a href="#" class="button cart-add">
+								<!-- SVG PLUS -->
+								<svg class="svg-plus">
+									<use xlink:href="#svg-plus"></use>
+								</svg>
+								<!-- /SVG PLUS -->
+								Add to Cart
+							</a>
+							
+							<!-- ACTIONS -->
+							<div class="actions">
+								<a href="#compare-modal" class="button medium compare cmp-popup" data-effect="mfp-3d-unfold">
+									<!-- SVG COMPARE -->
+									<svg class="svg-compare">
+										<use xlink:href="#svg-compare"></use>	
+									</svg>
+									<!-- /SVG COMPARE -->
+								</a>
+
+								<a href="#" class="button medium no-stock">
+									<!-- SVG PLUS -->
+									<svg class="svg-plus">
+										<use xlink:href="#svg-plus"></use>
+									</svg>
+									<!-- /SVG PLUS -->
+								</a>
+							</div>
+							<!-- /ACTIONS -->
+						</div>
+						<!-- /CELL -->
+					</div>
+					<!-- /ROW -->
+				</div>
+				<!-- /SHOPPING CART -->
+
+				<!-- PAGER -->
+				<ul class="pager">
+					<li>
+						<a href="#" class="button prev">
+							<!-- SVG ARROW -->
+							<svg class="svg-arrow">
+								<use xlink:href="#svg-arrow"></use>
+							</svg>
+							<!-- /SVG ARROW -->
+						</a>
+					</li>
+					<li class="selected"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">7</a></li>
+					<li>
+						<a href="#" class="button next">
+							<!-- SVG ARROW -->
+							<svg class="svg-arrow">
+								<use xlink:href="#svg-arrow"></use>
+							</svg>
+							<!-- /SVG ARROW -->
+						</a>
+					</li>
+				</ul>
+				<!-- /PAGER -->
+			</div>
+			<!-- /SHOP PRODUCTS -->
+		</section>
+	</div>
+	<!-- /SHOP -->
+
+{% endblock %}
