@@ -26,6 +26,7 @@ urlpatterns += [
     path('wishlist/', views.wishlist, name='wishlist'),
     path('women/', views.women, name='women'),
     path('404/', views.page_not_found, name='page_not_found'),
+    path('coming-soon/', views.coming_soon, name='coming_soon'),
     path('', views.home, name='home'),
 ]
 

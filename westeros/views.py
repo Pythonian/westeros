@@ -135,3 +135,11 @@ def page_not_found(request):
     context = {}
 
     return render(request, template, context)
+
+
+def coming_soon(request):
+
+    template = 'coming-soon.html'
+    context = {}
+
+    return render(request, template, context)

@@ -129,7 +129,7 @@
             <section id="header-bottom">
                 <!-- LOGO -->
                 <div class="logo-container">
-                    <a href="index.html">
+                    <a href="{% url 'home' %}">
                         <figure class="logo">
                             <img src="{% static 'westeros/images/logo.png' %}" alt="logo">
                             <figcaption>Westeros</figcaption>
@@ -303,19 +303,19 @@
         <!-- MENU LIST -->
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a href="{% url 'home' %}">Home</a>
             </li>
             <li>
                 <a href="{% url 'women' %}">Women</a>
             </li>
             <li>
-                <a href="men-shop.html">Men</a>
+                <a href="{% url 'men' %}">Men</a>
             </li>
             <li>
-                <a href="blog.html">Blog</a>
+                <a href="{% url 'blog' %}">Blog</a>
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </li>
             <li>
                 <a href="#"><span>English</span>
@@ -387,7 +387,7 @@
                 <!-- SUBMENU SMALL -->
                 <ul class="submenu-small">
                     <li>
-                        <a href="coming_soon">Coming Soon</a>
+                        <a href="{% url 'coming_soon' %}">Coming Soon</a>
                     </li>
                     <li>
                         <a href="product_builder">Product Builder</a>
